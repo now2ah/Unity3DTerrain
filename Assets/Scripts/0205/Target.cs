@@ -39,7 +39,7 @@ public class Target : MonoBehaviour
     {
         _startPosition = transform.position;
         _generator = FindFirstObjectByType<ObjectGenerator>();
-        int num = Random.Range(0, 1);
+        int num = Random.Range(0, 2);
         if (num == 0)
             _isRight = true;
         else

@@ -23,16 +23,17 @@ public class ObjectShooter : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        GetComponent<Rigidbody>().isKinematic = true;
+        //GetComponent<Rigidbody>().isKinematic = true;
         particle.Play();
 
         if (collision.gameObject.tag == "Terrain")
         {
             Destroy(gameObject, 1.0f);
         }
-        else
+        else if (collision.gameObject.tag == "Target")
         {
             objectGenerator.GetComponent<ObjectGenerator>().AddScore(10);
+            Destroy(gameObject, 1.0f);
         }
     }
 }
