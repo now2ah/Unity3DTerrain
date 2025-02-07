@@ -1,19 +1,48 @@
-<h1 align="center">Readme <br> Sample </h1>
+<h1 align="center">The Complete Guide of <br> Readme Markdown Syntax</h1>
+
+Markdown is a syntax for styling all forms of writing on the GitHub platform.
+Mostly, it is just regular text with a few non-alphabetic characters thrown in, like ```git # or * ```
+
+You can use Markdown most places around GitHub:
+
+1. Gists
+2. Comments in Issues and Pull Requests
+3. Files with the .md or .markdown extension
 
 ___
 
-### Heading
+### Headers
 
-# 제목 1
-## 제목 2
-### 제목 3
-#### 제목 4
-##### 제목 5
-###### 제목 6
+```git
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
 ___
 
 ### Font
+
+```git
+*Italics*
+_This will also be italic_
+**Bold text**
+__This will also be bold__
+***Bold and Italics***
+_You **can** combine them_
+~~Striked Text~~
+***~~Italic, bold, and strikethrough1~~***	
+```
 
 *Italics* <br>
 _This will also be italic_<br>
