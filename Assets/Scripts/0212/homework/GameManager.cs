@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         player.Initialize();
-        monster.Initialize();
+
+        for (int i=0; i < 10; i++)
+        {
+            Monster monsterObj = Instantiate(monster, new Vector3(i * 2f, 0, 60f), Quaternion.identity);
+            monsterObj.Initialize();
+        }
     }
 }

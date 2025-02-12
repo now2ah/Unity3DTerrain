@@ -1,30 +1,42 @@
-using UnityEngine;
 using System;
-
+using UnityEngine;
 
 public class Player : Character
 {
-    public event EventHandler OnPlayerDead;
+    public event EventHandler OnPlayerGoal;
+    Rigidbody _rigidbody;
 
     public override void Initialize()
     {
-        _hp = 100;
-
+        _hp = 50;
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     public override void Move(Vector3 pos)
     {
-        Debug.Log(pos);
-        transform.LookAt(pos);
-        transform.Translate(pos * Time.deltaTime * 2.0f);
+        if (_rigidbody != null)
+        {
+            _rigidbody.AddForce((pos - transform.position) * 1.0f, ForceMode.Impulse);
+        }
     }
 
     void _GetInput()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Move(new Vector3(targetPos.x, 0, targetPos.z));
+            RaycastHit hit;
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            {
+                Move(hit.point);
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Target")
+        {
+            OnPlayerGoal(this, EventArgs.Empty);
         }
     }
 

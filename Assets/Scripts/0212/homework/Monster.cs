@@ -11,15 +11,15 @@ public class Monster : Character
         _targetPlayer = FindFirstObjectByType<Player>();
         _hp = 50;
         _isStop = false;
-        _targetPlayer.OnPlayerDead += Stop;
+        _targetPlayer.OnPlayerGoal += Stop;
     }
 
     public override void Move(Vector3 pos)
     {
         if (null != _targetPlayer)
         {
-            transform.LookAt(_targetPlayer.transform);
-            transform.Translate(_targetPlayer.transform.position * Time.deltaTime * 2.0f);
+            transform.LookAt(pos);
+            transform.Translate(Vector3.forward * Time.deltaTime * 2.0f, Space.Self);
         }
     }
 
