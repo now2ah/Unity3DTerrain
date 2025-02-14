@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: assetbundle01
+  m_EditorClassIdentifier: 
+  m_GroupName: assetbundle01
+  m_GUID: 29605cb03b3f8e540bb1117628fc883f
+  m_SerializeEntries:
+  - m_GUID: 2a5276680f5b84b48bb4b6c9df2f788f
+    m_Address: Assets/Prefabs/RedSphere.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49de52297a72c7c468605194cfa31814
+    m_Address: Assets/Materials/Green.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65af5be42d9796141911174c1a1f1ebd
+    m_Address: Assets/Materials/Red.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f114cb9d62158c4fae1796a422cf7a5
+    m_Address: Assets/Prefabs/Sphere.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a845e1a8ec11bfd4c85915c59d9636ae
+    m_Address: Assets/Prefabs/GreenSphere.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6dece3a5f29203a40aff7f672bc2f62b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 334548ead47e987498ab09f1dd2bd907, type: 2}
+    - {fileID: 11400000, guid: 02cc77d88a6beea4b9bd2187810701b7, type: 2}
